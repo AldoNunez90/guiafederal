@@ -1,0 +1,611 @@
+[
+  {
+    "id": "medio-001",
+    "name": "Luzu TV",
+    "province": "CABA",
+    "city": "Ciudad de Buenos Aires",
+    "kind": "Streaming",
+    "topics": [
+      "Entretenimiento"
+    ],
+    "website": "https://www.youtube.com/@luzutv",
+    "logo": null,
+    "source": "https://fcpolit.unr.edu.ar/mapadestreamings/",
+    "researchStatus": "referencia",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": "https://www.youtube.com/@luzutv"
+  },
+  {
+    "id": "medio-002",
+    "name": "Olga",
+    "province": "CABA",
+    "city": "Ciudad de Buenos Aires",
+    "kind": "Streaming",
+    "topics": [
+      "Entretenimiento"
+    ],
+    "website": null,
+    "logo": null,
+    "source": "https://fcpolit.unr.edu.ar/mapadestreamings/",
+    "researchStatus": "referencia",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-003",
+    "name": "Blender",
+    "province": "CABA",
+    "city": "Ciudad de Buenos Aires",
+    "kind": "Streaming",
+    "topics": [
+      "Actualidad"
+    ],
+    "website": "https://www.youtube.com/@estoesblender",
+    "logo": null,
+    "source": "https://fcpolit.unr.edu.ar/mapadestreamings/",
+    "researchStatus": "referencia",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": "https://www.youtube.com/@estoesblender"
+  },
+  {
+    "id": "medio-004",
+    "name": "Gelatina",
+    "province": "CABA",
+    "city": "Ciudad de Buenos Aires",
+    "kind": "Streaming",
+    "topics": [
+      "Actualidad"
+    ],
+    "website": null,
+    "logo": null,
+    "source": "https://fcpolit.unr.edu.ar/mapadestreamings/",
+    "researchStatus": "referencia",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-005",
+    "name": "Carajo",
+    "province": "CABA",
+    "city": "Ciudad de Buenos Aires",
+    "kind": "Streaming",
+    "topics": [
+      "Actualidad"
+    ],
+    "website": null,
+    "logo": null,
+    "source": "https://fcpolit.unr.edu.ar/mapadestreamings/",
+    "researchStatus": "referencia",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-006",
+    "name": "Vorterix",
+    "province": "CABA",
+    "city": "Ciudad de Buenos Aires",
+    "kind": "Radio",
+    "topics": [
+      "Música"
+    ],
+    "website": "https://www.vorterix.com/",
+    "logo": null,
+    "source": "https://www.vorterix.com/",
+    "researchStatus": "sitio_revisado",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-007",
+    "name": "Futurock",
+    "province": "CABA",
+    "city": "Ciudad de Buenos Aires",
+    "kind": "Radio",
+    "topics": [
+      "Actualidad"
+    ],
+    "website": "https://futurock.fm/",
+    "logo": null,
+    "source": "https://futurock.fm/",
+    "researchStatus": "sitio_revisado",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-008",
+    "name": "El Destape Radio",
+    "province": "CABA",
+    "city": "Ciudad de Buenos Aires",
+    "kind": "Radio",
+    "topics": [
+      "Actualidad"
+    ],
+    "website": "https://www.eldestapeweb.com/radio",
+    "logo": null,
+    "source": "https://www.eldestapeweb.com/radio",
+    "researchStatus": "sitio_revisado",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-009",
+    "name": "AIRE",
+    "province": "Santa Fe",
+    "city": "Santa Fe",
+    "kind": "Radio",
+    "topics": [
+      "Actualidad"
+    ],
+    "website": "https://www.airedesantafe.com.ar/",
+    "logo": null,
+    "source": "https://www.airedesantafe.com.ar/",
+    "researchStatus": "sitio_revisado",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": "https://www.youtube.com/@airedesantafedigital"
+  },
+  {
+    "id": "medio-010",
+    "name": "Aconcagua Radio",
+    "province": "Mendoza",
+    "city": "Mendoza",
+    "kind": "Radio",
+    "topics": [
+      "Actualidad"
+    ],
+    "website": "https://www.aconcaguaradio.com/",
+    "logo": null,
+    "source": "https://www.aconcaguaradio.com/",
+    "researchStatus": "sitio_revisado",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-011",
+    "name": "MDZ Radio",
+    "province": "Mendoza",
+    "city": "Mendoza",
+    "kind": "Radio",
+    "topics": [
+      "Actualidad"
+    ],
+    "website": "https://www.mdzol.com/sociedad/en-vivo-mira-y-escucha-mdz-radio-streaming-n1258164",
+    "logo": null,
+    "source": "https://www.mdzol.com/sociedad/en-vivo-mira-y-escucha-mdz-radio-streaming-n1258164",
+    "researchStatus": "referencia",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-012",
+    "name": "La Voz en Vivo",
+    "province": "Córdoba",
+    "city": "Córdoba",
+    "kind": "Streaming",
+    "topics": [
+      "Actualidad"
+    ],
+    "website": "https://www.lavoz.com.ar/",
+    "logo": null,
+    "source": "https://canalc.com.ar/canal-c-la-voz-streaming/",
+    "researchStatus": "referencia",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-013",
+    "name": "LG Play",
+    "province": "Tucumán",
+    "city": "San Miguel de Tucumán",
+    "kind": "Streaming",
+    "topics": [
+      "Actualidad"
+    ],
+    "website": "https://marketing.lagaceta.com.ar/seccion/17/canal-audiovisual-la-gaceta.html",
+    "logo": null,
+    "source": "https://marketing.lagaceta.com.ar/seccion/17/canal-audiovisual-la-gaceta.html",
+    "researchStatus": "referencia",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-014",
+    "name": "LM Neuquén en Vivo",
+    "province": "Neuquén",
+    "city": "Neuquén",
+    "kind": "Streaming",
+    "topics": [
+      "Actualidad"
+    ],
+    "website": "https://www.lmneuquen.com/neuquen/lm-neuquen-vivo-como-es-la-nueva-apuesta-streaming-que-arranca-este-lunes-2-marzo-n1229849",
+    "logo": null,
+    "source": "https://www.lmneuquen.com/neuquen/lm-neuquen-vivo-como-es-la-nueva-apuesta-streaming-que-arranca-este-lunes-2-marzo-n1229849",
+    "researchStatus": "referencia",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-015",
+    "name": "Radioactiva 100.7",
+    "province": "Misiones",
+    "city": "Posadas",
+    "kind": "Radio",
+    "topics": [
+      "Música"
+    ],
+    "website": "https://www.elterritorio.com.ar/paginas/p3-radi",
+    "logo": null,
+    "source": "https://www.elterritorio.com.ar/paginas/p3-radi",
+    "researchStatus": "sitio_revisado",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-016",
+    "name": "Cadena 3",
+    "province": "Córdoba",
+    "city": "Córdoba",
+    "kind": "Radio",
+    "topics": [
+      "Actualidad"
+    ],
+    "website": "https://www.cadena3.com/",
+    "logo": null,
+    "source": "https://www.cadena3.com/",
+    "researchStatus": "sitio_revisado",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-017",
+    "name": "El Doce",
+    "province": "Córdoba",
+    "city": "Córdoba",
+    "kind": "Televisión",
+    "topics": [
+      "Actualidad"
+    ],
+    "website": "https://eldoce.tv/",
+    "logo": null,
+    "source": "https://eldoce.tv/",
+    "researchStatus": "sitio_revisado",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-018",
+    "name": "LV12",
+    "province": "Tucumán",
+    "city": "San Miguel de Tucumán",
+    "kind": "Radio",
+    "topics": [
+      "Actualidad"
+    ],
+    "website": "https://www.lv12.com.ar/",
+    "logo": null,
+    "source": "https://www.lv12.com.ar/",
+    "researchStatus": "sitio_revisado",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-019",
+    "name": "Radio Sudamericana",
+    "province": "Corrientes",
+    "city": "Corrientes",
+    "kind": "Radio",
+    "topics": [
+      "Actualidad"
+    ],
+    "website": "https://www.radiosudamericana.com/",
+    "logo": null,
+    "source": "https://www.radiosudamericana.com/",
+    "researchStatus": "sitio_revisado",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [
+      {
+        "provider": "youtube",
+        "url": "https://www.youtube.com/watch?v=xPpjabxyWc4",
+        "source": "https://www.radiosudamericana.com/",
+        "discoveredOn": "2026-10-23",
+        "verification": "published_by_medium",
+        "notes": "Enlace publicado en el sitio oficial. Reproducción y estado actual sin comprobar."
+      }
+    ],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-020",
+    "name": "Canal Doce Misiones",
+    "province": "Misiones",
+    "city": "Posadas",
+    "kind": "Televisión",
+    "topics": [
+      "Actualidad"
+    ],
+    "website": "https://www.canal12misiones.com/",
+    "logo": null,
+    "source": "https://www.canal12misiones.com/",
+    "researchStatus": "sitio_revisado",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-021",
+    "name": "Canal 10 Tucumán",
+    "province": "Tucumán",
+    "city": "San Miguel de Tucumán",
+    "kind": "Televisión",
+    "topics": [
+      "Actualidad"
+    ],
+    "website": "https://canal10.com.ar/",
+    "logo": null,
+    "source": "https://canal10.com.ar/",
+    "researchStatus": "sitio_revisado",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio. Identificador de canal encontrado en el embed del sitio oficial; video específico pendiente.",
+    "youtubeChannel": "https://www.youtube.com/channel/UCtBQpq6dtrXgIU7l5XFjj8Q"
+  },
+  {
+    "id": "medio-022",
+    "name": "LA17",
+    "province": "Chubut",
+    "city": "Puerto Madryn",
+    "kind": "Radio",
+    "topics": [
+      "Actualidad"
+    ],
+    "website": "https://lu17.com/",
+    "logo": null,
+    "source": "https://lu17.com/",
+    "researchStatus": "sitio_revisado",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-023",
+    "name": "Radio Universidad UNLP",
+    "province": "Buenos Aires",
+    "city": "La Plata",
+    "kind": "Radio",
+    "topics": [
+      "Cultura"
+    ],
+    "website": "https://www.radiouniversidad.unlp.edu.ar/",
+    "logo": null,
+    "source": "https://www.radiouniversidad.unlp.edu.ar/",
+    "researchStatus": "sitio_revisado",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-024",
+    "name": "LU24",
+    "province": "Buenos Aires",
+    "city": "Tres Arroyos",
+    "kind": "Radio",
+    "topics": [
+      "Actualidad"
+    ],
+    "website": "https://www.lu24.com.ar/",
+    "logo": null,
+    "source": "https://www.lu24.com.ar/",
+    "researchStatus": "sitio_revisado",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-025",
+    "name": "La Coope",
+    "province": "Mendoza",
+    "city": "Godoy Cruz",
+    "kind": "Radio",
+    "topics": [
+      "Música"
+    ],
+    "website": "https://www.lacoope.net/",
+    "logo": null,
+    "source": "https://www.lacoope.net/",
+    "researchStatus": "sitio_revisado",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-026",
+    "name": "Río Negro",
+    "province": "Río Negro",
+    "city": "General Roca",
+    "kind": "Streaming",
+    "topics": [
+      "Actualidad"
+    ],
+    "website": "https://www.rionegro.com.ar/",
+    "logo": null,
+    "source": "https://www.rionegro.com.ar/",
+    "researchStatus": "sitio_revisado",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-027",
+    "name": "Radio Kermés",
+    "province": "La Pampa",
+    "city": "Santa Rosa",
+    "kind": "Radio",
+    "topics": [
+      "Actualidad"
+    ],
+    "website": null,
+    "logo": null,
+    "source": "https://www.radiokermes.com/",
+    "researchStatus": "pendiente",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-028",
+    "name": "Unidiversidad",
+    "province": "Mendoza",
+    "city": "Mendoza",
+    "kind": "Radio",
+    "topics": [
+      "Cultura"
+    ],
+    "website": null,
+    "logo": null,
+    "source": "https://www.unidiversidad.com.ar/",
+    "researchStatus": "pendiente",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-029",
+    "name": "Litus",
+    "province": "Santa Fe",
+    "city": "Santa Fe",
+    "kind": "Televisión",
+    "topics": [
+      "Cultura"
+    ],
+    "website": null,
+    "logo": null,
+    "source": "https://www.litus.com.ar/",
+    "researchStatus": "pendiente",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  },
+  {
+    "id": "medio-030",
+    "name": "Radio Dos",
+    "province": "Corrientes",
+    "city": "Corrientes",
+    "kind": "Radio",
+    "topics": [
+      "Actualidad"
+    ],
+    "website": null,
+    "logo": null,
+    "source": "https://www.radiodos.com.ar/",
+    "researchStatus": "pendiente",
+    "researchDate": "2026-10-23",
+    "liveStatus": "unknown",
+    "lastCheckedAt": null,
+    "streams": [],
+    "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
+    "youtubeChannel": null
+  }
+]

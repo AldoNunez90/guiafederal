@@ -1,0 +1,26 @@
+/* Paleta de referencia. Cambiar estos cinco valores actualiza toda la interfaz. */
+:root {
+  --color-frozen-water: #D7FFF1;
+  --color-light-green: #AAFCB8;
+  --color-soft-green: #8CD790;
+  --color-muted-teal: #77AF9C;
+  --color-emerald-depths: #285943;
+
+  /* Roles de interfaz: permiten cambiar el tema sin editar componentes. */
+  --color-background: var(--color-frozen-water);
+  --color-surface: #FFFFFF;
+  --color-surface-hover: var(--color-frozen-water);
+  --color-text: var(--color-emerald-depths);
+  --color-text-muted: var(--color-emerald-depths);
+  --color-primary: var(--color-emerald-depths);
+  --color-on-primary: var(--color-frozen-water);
+  --color-accent: var(--color-light-green);
+  --color-accent-secondary: var(--color-soft-green);
+  --color-border: var(--color-muted-teal);
+  --color-focus: var(--color-emerald-depths);
+  --color-overlay: rgb(40 89 67 / 65%);
+  --color-shadow: rgb(40 89 67 / 12%);
+  --radius-small: 8px;
+  --radius-large: 18px;
+  --size-logo: 48px;
+}

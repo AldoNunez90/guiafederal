@@ -1,0 +1,13 @@
+{
+  "name": "guia-federal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "type": "module",
+  "dependencies": {
+    "vercel": "^65.3.1"
+  }
+}
