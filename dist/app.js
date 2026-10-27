@@ -16,6 +16,7 @@ function recordOpen(id){recent=[id,...recent.filter(x=>x!==id)].slice(0,12);save
 function row(m){
  const card=element('article',undefined,'card');
  const mono=element('div',m.name.split(' ').slice(0,2).map(x=>x[0]).join(''),'monogram');mono.setAttribute('aria-hidden','true');
+ if(m.logo&&/^assets\/logos\/[a-z0-9.-]+$/.test(m.logo)){const image=element('img');image.src=m.logo;image.alt='';image.loading='lazy';image.decoding='async';image.width=48;image.height=48;image.onerror=()=>{image.remove();mono.textContent=m.name.split(' ').slice(0,2).map(x=>x[0]).join('')};mono.textContent='';mono.classList.add('official-logo');if(m.logoTheme==='dark')mono.classList.add('logo-dark');mono.append(image)}
  const content=element('div',undefined,'row-content');
  const title=element('h3');
  if(youtubeStream(m)){const button=element('button','▶ '+m.name,'media-link play-link');button.setAttribute('aria-label','Ver '+m.name);button.onclick=()=>openPlayer(m,button);title.append(button)}else if(safeURL(m.website)){const link=external(m.name,m.website,'media-link');link.addEventListener('click',()=>recordOpen(m.id));title.append(link)}else title.textContent=m.name;
@@ -24,7 +25,9 @@ function row(m){
  heart.onclick=()=>{const next=new Set(favorites);next.has(m.id)?next.delete(m.id):next.add(m.id);if(save('sf-favorites',[...next])){favorites=next;render()}};
  const details=element('details',undefined,'row-details');const summary=element('summary','Información de '+m.name);summary.setAttribute('aria-label','Información de '+m.name);const detailBody=element('div',undefined,'detail-body');
  const research={sitio_revisado:'Sitio consultado',referencia:'Referencia encontrada',pendiente:'Revisión pendiente'};
- detailBody.append(element('p',m.topics.join(' · ')),element('p','En vivo: sin verificar. El video puede haber finalizado.'),element('p',research[m.researchStatus]+' · '+m.researchDate),external('Fuente del relevamiento ↗',m.source,'source'));
+ detailBody.append(element('p',m.topics.join(' · ')),element('p',m.accessNote||'En vivo: sin verificar.'),element('p',research[m.researchStatus]+' · '+m.researchDate),external('Fuente del relevamiento ↗',m.source,'source'));
+ if(youtubeStream(m)?.title)detailBody.append(element('p','Video: '+youtubeStream(m).title));
+ if(m.logoSource)detailBody.append(external('Origen del logo ↗',m.logoSource,'source'));
  if(safeURL(m.youtubeChannel))detailBody.append(external('Abrir canal en YouTube ↗',m.youtubeChannel,'source'));
  if(youtubeStream(m)&&safeURL(m.website))detailBody.append(external('Sitio oficial ↗',m.website,'source'));
  if(!safeURL(m.website))detailBody.append(element('p','Acceso oficial pendiente de validar.'));
@@ -40,6 +43,7 @@ function render(){
  $('results').textContent='Tu selección';const recentMedia=recent.map(id=>media.find(m=>m.id===id)).filter(Boolean);
  if(recentMedia.length)section('Últimos abiertos',recentMedia.slice(0,5));
  const saved=sorted.filter(m=>favorites.has(m.id));if(saved.length)section('Tus favoritos',saved);
+ section('Para probar',sorted.filter(m=>m.pilot));
  section('Explorá el país',sorted);
 }
 let activeVideo=null,returnFocus=null;
@@ -47,6 +51,7 @@ function openPlayer(m,trigger){
  const stream=youtubeStream(m);if(!stream)return;
  const id=youtubeVideoId(stream.url);returnFocus=m.id;
  $('player-heading').textContent=m.name;
+ $('player-video-title').textContent=stream.title||'Video del canal oficial';
  $('player-external').href='https://www.youtube.com/watch?v='+id;
  $('player-external').setAttribute('aria-label','Abrir '+m.name+' en YouTube (otra pestaña)');
  const channel=safeURL(m.youtubeChannel);$('player-channel').hidden=!channel;if(channel)$('player-channel').href=channel;

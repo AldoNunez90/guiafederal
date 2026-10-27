@@ -109,15 +109,30 @@
       "Música"
     ],
     "website": "https://www.vorterix.com/",
-    "logo": null,
+    "logo": "assets/logos/vorterix.svg",
     "source": "https://www.vorterix.com/",
     "researchStatus": "sitio_revisado",
-    "researchDate": "2026-10-23",
+    "researchDate": "2026-10-26",
     "liveStatus": "unknown",
     "lastCheckedAt": null,
-    "streams": [],
+    "streams": [
+      {
+        "provider": "youtube",
+        "url": "https://www.youtube.com/watch?v=ZcQpju9mUgU",
+        "source": "https://www.youtube.com/@VorterixOficial/live",
+        "discoveredOn": "2026-10-26",
+        "verification": "official_author_oembed",
+        "title": "Paren la Mano · 26/10/2026",
+        "contentKind": "published_video",
+        "notes": "Autor confirmado con oEmbed. Video publicado; no implica que siga en vivo."
+      }
+    ],
     "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
-    "youtubeChannel": null
+    "youtubeChannel": "https://www.youtube.com/@VorterixOficial",
+    "logoSource": "https://d3gwib4l25xfl6.cloudfront.net/vtx/assets/logo_vorterix-icon.svg",
+    "pilot": true,
+    "logoTheme": "dark",
+    "accessNote": "Video publicado por el canal oficial; no es una confirmación de transmisión en vivo."
   },
   {
     "id": "medio-007",
@@ -169,15 +184,19 @@
       "Actualidad"
     ],
     "website": "https://www.airedesantafe.com.ar/",
-    "logo": null,
+    "logo": "assets/logos/aire.svg",
     "source": "https://www.airedesantafe.com.ar/",
     "researchStatus": "sitio_revisado",
-    "researchDate": "2026-10-23",
+    "researchDate": "2026-10-26",
     "liveStatus": "unknown",
     "lastCheckedAt": null,
     "streams": [],
     "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
-    "youtubeChannel": "https://www.youtube.com/@airedesantafedigital"
+    "youtubeChannel": "https://www.youtube.com/channel/UCr7TYJVXSe3_rVILo-F8Xhg",
+    "logoSource": "https://www.airedesantafe.com.ar/css-custom/images/logo.svg",
+    "pilot": true,
+    "logoTheme": "light",
+    "accessNote": "Sitio y canal oficial revisados. No se identificó un video de transmisión vigente."
   },
   {
     "id": "medio-010",
@@ -369,10 +388,10 @@
       "Actualidad"
     ],
     "website": "https://www.radiosudamericana.com/",
-    "logo": null,
+    "logo": "assets/logos/sudamericana.png",
     "source": "https://www.radiosudamericana.com/",
     "researchStatus": "sitio_revisado",
-    "researchDate": "2026-10-23",
+    "researchDate": "2026-10-26",
     "liveStatus": "unknown",
     "lastCheckedAt": null,
     "streams": [
@@ -380,13 +399,19 @@
         "provider": "youtube",
         "url": "https://www.youtube.com/watch?v=xPpjabxyWc4",
         "source": "https://www.radiosudamericana.com/",
-        "discoveredOn": "2026-10-23",
-        "verification": "published_by_medium",
-        "notes": "Enlace publicado en el sitio oficial. Reproducción y estado actual sin comprobar."
+        "discoveredOn": "2026-10-26",
+        "verification": "official_author_oembed",
+        "title": "#BTP | 23-10-2026",
+        "contentKind": "published_video",
+        "notes": "Autor confirmado con oEmbed. Video publicado; no implica que siga en vivo."
       }
     ],
     "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
-    "youtubeChannel": null
+    "youtubeChannel": "https://www.youtube.com/@radiosudamericana1003",
+    "logoSource": "https://www.radiosudamericana.com/img/logo.png",
+    "pilot": true,
+    "logoTheme": "light",
+    "accessNote": "Video publicado por el canal oficial; no es una confirmación de transmisión en vivo."
   },
   {
     "id": "medio-020",
@@ -412,21 +437,36 @@
     "id": "medio-021",
     "name": "Canal 10 Tucumán",
     "province": "Tucumán",
-    "city": "San Miguel de Tucumán",
+    "city": "Yerba Buena",
     "kind": "Televisión",
     "topics": [
       "Actualidad"
     ],
     "website": "https://canal10.com.ar/",
-    "logo": null,
+    "logo": "assets/logos/canal10.png",
     "source": "https://canal10.com.ar/",
     "researchStatus": "sitio_revisado",
-    "researchDate": "2026-10-23",
+    "researchDate": "2026-10-26",
     "liveStatus": "unknown",
     "lastCheckedAt": null,
-    "streams": [],
+    "streams": [
+      {
+        "provider": "youtube",
+        "url": "https://www.youtube.com/watch?v=VoY1yPzaFHI",
+        "source": "https://www.youtube.com/@canal10tuc/live",
+        "discoveredOn": "2026-10-26",
+        "verification": "official_author_oembed",
+        "title": "Apertura de sesiones ordinarias 2026",
+        "contentKind": "published_video",
+        "notes": "Autor confirmado con oEmbed. Video publicado; no implica que siga en vivo."
+      }
+    ],
     "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio. Identificador de canal encontrado en el embed del sitio oficial; video específico pendiente.",
-    "youtubeChannel": "https://www.youtube.com/channel/UCtBQpq6dtrXgIU7l5XFjj8Q"
+    "youtubeChannel": "https://www.youtube.com/@canal10tuc",
+    "logoSource": "https://canal10.com.ar/static/_1793022615000/custom/logo-movil.png",
+    "pilot": true,
+    "logoTheme": "light",
+    "accessNote": "Video publicado por el canal oficial; no es una confirmación de transmisión en vivo."
   },
   {
     "id": "medio-022",
@@ -498,15 +538,19 @@
       "Música"
     ],
     "website": "https://www.lacoope.net/",
-    "logo": null,
+    "logo": "assets/logos/lacoope.svg",
     "source": "https://www.lacoope.net/",
     "researchStatus": "sitio_revisado",
-    "researchDate": "2026-10-23",
+    "researchDate": "2026-10-26",
     "liveStatus": "unknown",
     "lastCheckedAt": null,
     "streams": [],
     "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
-    "youtubeChannel": null
+    "youtubeChannel": "https://www.youtube.com/channel/UCgoXcRG2b_g-aTJ1StneI1A",
+    "logoSource": "https://statics.lacoope.net/coope/img/global/lacoope.svg",
+    "pilot": true,
+    "logoTheme": "light",
+    "accessNote": "Sitio y canal oficial revisados. No se identificó un video de transmisión vigente."
   },
   {
     "id": "medio-026",
