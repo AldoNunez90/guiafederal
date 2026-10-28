@@ -1,0 +1,9 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {verifiedLive,detectLive,channelReference} from '../server/youtube-live.js';
+const channel='UCvCTWHCbBC0b9UIeLeNs8ug';
+const current={id:'xPpjabxyWc4',snippet:{channelId:channel,liveBroadcastContent:'live',title:'Ahora'},status:{privacyStatus:'public',embeddable:true},liveStreamingDetails:{actualStartTime:'2026-10-28T12:00:00Z'}};
+test('Descarta grabaciones, programados, otro canal y videos no integrables',()=>{assert.ok(verifiedLive(current,channel));for(const v of [{...current,liveStreamingDetails:{...current.liveStreamingDetails,actualEndTime:'2026-10-28T13:00:00Z'}},{...current,snippet:{...current.snippet,liveBroadcastContent:'upcoming'}},{...current,status:{...current.status,embeddable:false}},{...current,snippet:{...current.snippet,channelId:'otro'}}])assert.equal(verifiedLive(v,channel),false)});
+test('Encuentra el nuevo vivo y emite vigencia de cinco minutos',async()=>{const fetcher=async u=>({ok:true,json:async()=>({items:u.pathname.endsWith('/search')?[{id:{videoId:current.id}}]:[current]})});const now=Date.parse('2026-10-28T14:00:00Z');const r=await detectLive({youtubeChannel:'https://www.youtube.com/channel/'+channel,streams:[]},{key:'test',now,fetcher});assert.equal(r.liveStatus,'live');assert.equal(Date.parse(r.streams[0].expiresAt)-now,300000)});
+test('Respeta la caché de búsqueda sin inventar un vivo',async()=>{const r=await detectLive({youtubeChannel:'https://www.youtube.com/channel/'+channel,liveDiscoveryAt:new Date().toISOString(),streams:[]},{key:'test',fetcher:()=>{throw Error('No debe consultar')}});assert.equal(r.liveStatus,'unknown');assert.equal(r.streams.length,0)});
+test('Errores de cuota no producen confirmaciones',async()=>{await assert.rejects(detectLive({youtubeChannel:'https://www.youtube.com/channel/'+channel},{key:'test',fetcher:async()=>({ok:false})}));assert.equal(channelReference('https://evil.test/@canal'),null)});

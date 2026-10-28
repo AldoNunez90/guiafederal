@@ -7,7 +7,8 @@
     "check": "node scripts/check.mjs",
     "db:status": "node scripts/db-status.mjs",
     "db:seed": "node scripts/db-seed.mjs",
-    "db:live": "node scripts/db-live.mjs"
+    "db:live": "node scripts/db-live.mjs",
+    "db:detect": "node scripts/db-detect.mjs"
   },
   "type": "module",
   "dependencies": {

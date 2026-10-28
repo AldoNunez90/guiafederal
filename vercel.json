@@ -3,5 +3,10 @@
   "framework": null,
   "buildCommand": "",
   "installCommand": "npm ci",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "functions": {
+    "api/media.js": {
+      "maxDuration": 60
+    }
+  }
 }

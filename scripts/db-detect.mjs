@@ -1,0 +1,3 @@
+import {database,closeDatabase} from '../server/db.js';
+import {refreshPilotLive} from '../server/youtube-live.js';
+try{if(!process.env.YOUTUBE_API_KEY){console.log('Falta YOUTUBE_API_KEY en atlas-credentials.env. No se consultó YouTube.');process.exitCode=1}else{const db=await database();await refreshPilotLive(db);const rows=await db.collection('media').find({pilot:true},{projection:{_id:0,name:1,liveStatus:1,liveCheckError:1}}).toArray();for(const r of rows)console.log(r.name+': '+(r.liveCheckError?'comprobación fallida':r.liveStatus))}}catch{console.error('No se pudo ejecutar el detector.');process.exitCode=1}finally{await closeDatabase().catch(()=>{})}
