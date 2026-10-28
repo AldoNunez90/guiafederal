@@ -1,3 +1,4 @@
+import {matchesMedia} from './search.js';
 import {
   youtubeVideoId,
   youtubeEmbedURL,
@@ -112,7 +113,7 @@ function row(m) {
     "monogram",
   );
   mono.setAttribute("aria-hidden", "true");
-  if (m.logo && /^assets\/logos\/[a-z0-9.-]+$/.test(m.logo)) {
+  if (m.logo && (/^assets\/logos\/[a-z0-9.-]+$/.test(m.logo) || /^https:\/\//.test(safeURL(m.logo)||""))) {
     const image = element("img");
     image.src = m.logo;
     image.alt = "";
@@ -135,6 +136,7 @@ function row(m) {
   }
   const content = element("div", undefined, "row-content");
   const live = currentLiveStream(m);
+  if(live)card.classList.add('is-live');
   const website = safeURL(m.website);
   const title = element("h3", m.name);
   content.append(
@@ -142,8 +144,8 @@ function row(m) {
     element("p", m.kind + " · " + m.city + " · " + m.province, "location"),
     element(
       "span",
-      live ? "▶ Ver vivo" : website ? "Abrir web ↗" : "Acceso pendiente",
-      "action-label",
+      live ? "En vivo · Ver vivo" : website ? "Abrir web ↗" : "Acceso pendiente",
+      live ? "action-label live-label" : "action-label",
     ),
   );
   const action = element(
@@ -237,10 +239,7 @@ function render() {
   );
   const list = sorted.filter(
     (m) =>
-      (!query ||
-        norm([m.name, m.city, m.province, ...m.topics].join(" ")).includes(
-          query,
-        )) &&
+      (!query || matchesMedia(m,query)) &&
       (!$("province").value || m.province === $("province").value) &&
       (!$("kind").value || m.kind === $("kind").value) &&
       (!$("topic").value || m.topics.includes($("topic").value)) &&

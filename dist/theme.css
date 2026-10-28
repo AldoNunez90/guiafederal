@@ -20,6 +20,9 @@
   --color-focus: var(--color-emerald-depths);
   --color-overlay: rgb(40 89 67 / 65%);
   --color-shadow: rgb(40 89 67 / 12%);
+  --color-live-background: #E6FFE8;
+  --color-live-border: #3D8C57;
+  --color-live-indicator: #C62828;
   --radius-small: 8px;
   --radius-large: 18px;
   --size-logo: 48px;

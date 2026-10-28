@@ -42,7 +42,7 @@ export async function refreshPilotLive(db){
   // Reserva persistente: evita que cada visitante consuma una nueva consulta.
   const reserved=await collection.findOneAndUpdate({id:m.id,$or:[{liveCheckNextAt:{$exists:false}},{liveCheckNextAt:{$lte:new Date(now)}}]},{$set:{liveCheckNextAt:new Date(now+120000)}},{returnDocument:'after'});
   if(!reserved)return;
-  try{const update=await detectLive(reserved,{key,now});await collection.updateOne({id:m.id},{$set:update})}
+  try{const update=await detectLive(reserved,{key,now});await collection.updateOne({id:m.id,youtubeChannel:reserved.youtubeChannel},{$set:update})}
   catch{await collection.updateOne({id:m.id},{$set:{liveStatus:'unknown',liveCheckError:'CHECK_FAILED',liveCheckNextAt:new Date(now+15*60*1000)}});console.error('[live-check] CHECK_FAILED',m.id)}
  }));
 }

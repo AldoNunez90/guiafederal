@@ -1,0 +1,11 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {sessionToken,validToken,passwordMatches,sameOrigin} from '../server/admin-auth.js';
+import {editableMedia} from '../server/media-validation.js';
+import {matchesMedia} from '../dist/search.js';
+process.env.ADMIN_PASSWORD='test-password-with-enough-length';process.env.ADMIN_SESSION_SECRET='test-secret-with-more-than-thirty-two-characters';
+const base={id:'medio-test',media:{name:'Medio',province:'Córdoba',city:'Córdoba',kind:'Streaming',website:'https://example.com',youtubeChannel:'',logo:'',topics:['Cultura'],people:[{id:'person-1',name:'María Pérez',aliases:['La Mery'],role:'Panelista',program:'La tarde'}],publicationStatus:'published'}};
+test('Autenticación rechaza contraseña incorrecta, firma adulterada y sesión vencida',()=>{assert.equal(passwordMatches('no'),false);assert.equal(passwordMatches(process.env.ADMIN_PASSWORD),true);const token=sessionToken(1000);assert.ok(validToken(token,2000));assert.equal(validToken(token+'x',2000),false);assert.equal(validToken(token,1000+8*3600000+1),false)});
+test('Escrituras requieren origen coincidente',()=>{assert.ok(sameOrigin({headers:{origin:'https://guia.test',host:'guia.test'}}));assert.equal(sameOrigin({headers:{origin:'https://otro.test',host:'guia.test'}}),false);assert.equal(sameOrigin({headers:{}}),false)});
+test('Valida personas, roles y URLs; ignora propiedades fuera de la lista permitida',()=>{const clean=editableMedia({...base,media:{...base.media,password:'nunca guardar'}});assert.equal(clean.password,undefined);assert.equal(clean.people[0].role,'Panelista');assert.throws(()=>editableMedia({...base,media:{...base.media,website:'javascript:alert(1)'}}));assert.throws(()=>editableMedia({...base,media:{...base.media,people:[{...base.media.people[0],role:'inventado'}]}}))});
+test('Busca nombre y alias sin acentos, y mantiene búsqueda de ciudad',()=>{assert.ok(matchesMedia(base.media,'maria'));assert.ok(matchesMedia(base.media,'MERY'));assert.ok(matchesMedia(base.media,'cordoba'));assert.equal(matchesMedia(base.media,'otra persona'),false)});

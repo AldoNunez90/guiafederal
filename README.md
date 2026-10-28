@@ -49,3 +49,9 @@ La sección Para probar incluye Vorterix, Radio Sudamericana, La Coope, AIRE y C
 ## Catálogo MongoDB
 
 Conexión e importación inicial completadas: 30 medios en guia_federal.media. Reiniciar npm start para usar /api/media. Herramientas: npm run db:status, npm run db:seed y npm run db:live. Ver docs/mongodb.md para actualización manual y variables requeridas en Vercel. La detección automática todavía no está implementada.
+
+## Panel y personas
+
+Panel privado en /admin. ADMIN_PASSWORD y ADMIN_SESSION_SECRET se generaron en atlas-credentials.env; copiar sus valores a Vercel y redesplegar para probar allí. No subir el archivo. Reiniciar npm start para el panel local. Las fichas admiten personas con nombre, alias, rol y programa; la búsqueda pública ya los incluye. Guía completa en docs/administracion.md.
+
+Validación: 15 tests automatizados y prueba HTTP contra Atlas de login, edición de ficha temporal, conflicto de versiones y origen. Ficha de prueba eliminada; revisión visual del acceso y de la guía completada. Prueba del formulario completo en navegador y en teléfono real pendiente.
