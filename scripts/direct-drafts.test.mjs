@@ -1,0 +1,6 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {ensureSubmissionDraft} from '../server/submission-draft.js';
+import {editableMedia} from '../server/media-validation.js';
+test('Nueva propuesta crea ficha pendiente en borrador con ID estable',async()=>{let saved;const db={collection:()=>({updateOne:async(filter,update,opts)=>{saved={filter,doc:update.$setOnInsert,opts}}})};const proposal={key:'abc',name:'Radio',province:'Buenos Aires',city:'La Plata',kind:'Radio',website:'https://example.test'};const id=await ensureSubmissionDraft(db,proposal);assert.equal(id,'medio-sub-abc');assert.equal(saved.doc.publicationStatus,'draft');assert.equal(saved.doc.reviewStatus,'pending');assert.equal(saved.opts.upsert,true);assert.equal(saved.doc.liveStatus,'unknown')});
+test('Audio sólo admite enlaces HTTPS y no código ejecutable',()=>{const body={id:'medio-test',media:{name:'Radio',province:'Buenos Aires',city:'La Plata',kind:'Radio',website:'',youtubeChannel:'',logo:'',publicationStatus:'published',topics:[],people:[],audioUrl:'https://example.test/stream.mp3'}};assert.equal(editableMedia(body).audioUrl,body.media.audioUrl);assert.throws(()=>editableMedia({...body,media:{...body.media,audioUrl:'javascript:alert(1)'}}))});

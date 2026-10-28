@@ -59,3 +59,7 @@ Validación: 15 tests automatizados y prueba HTTP contra Atlas de login, edició
 ## Segunda prueba
 
 Muestra ampliada a diez fichas con logos oficiales y doce relaciones verificadas de personas. Se conservaron las ediciones existentes, incluido el nombre Vorterix AO. El panel ofrece reutilizar una persona existente. Sumar un medio ahora envía propuestas a MongoDB; en /admin se revisan y se aceptan como borrador antes de publicar. No requiere nuevas variables. Código y logos pendientes de despliegue; datos enriquecidos ya aplicados en Atlas. Fuentes, límites y guía de prueba en docs/segunda-prueba.md.
+
+## Flujo directo y audio
+
+La exportación pública se retiró. Las propuestas aparecen directamente en el panel como borradores pendientes; se aprueban cambiando Publicación a Publicado. El panel muestra contadores/filtros por estado y permite configurar audio directo HTTPS. Se configuraron señales oficiales de Cadena 3 y Aconcagua. Cadena 3 vuelve al monitoreo y distingue su señal principal de La Popu. Ver docs/flujo-directo-y-audio.md.

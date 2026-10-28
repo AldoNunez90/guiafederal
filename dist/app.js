@@ -138,18 +138,19 @@ function row(m) {
   const live = currentLiveStream(m);
   if(live)card.classList.add('is-live');
   const website = safeURL(m.website);
+  const audio= m.kind==='Radio'?safeURL(m.audioUrl):null;
   const title = element("h3", m.name);
   content.append(
     title,
     element("p", m.kind + " · " + m.city + " · " + m.province, "location"),
     element(
       "span",
-      live ? "En vivo · Ver vivo" : website ? "Abrir web ↗" : "Acceso pendiente",
+      live ? "En vivo · Ver vivo" : audio ? "Escuchar audio" : website ? "Abrir web ↗" : "Acceso pendiente",
       live ? "action-label live-label" : "action-label",
     ),
   );
   const action = element(
-    live ? "button" : website ? "a" : "div",
+    (live||audio) ? "button" : website ? "a" : "div",
     undefined,
     "medium-action",
   );
@@ -164,6 +165,7 @@ function row(m) {
         toast("La confirmación del vivo venció. Podés abrir la web del medio.");
       }
     };
+  } else if(audio){action.type='button';action.setAttribute('aria-label','Escuchar '+m.name);action.classList.add('play-link');action.onclick=()=>openAudio(m);
   } else if (website) {
     action.href = website;
     action.target = "_blank";
@@ -280,6 +282,7 @@ function render() {
 let activeVideo = null,
   returnFocus = null;
 function openPlayer(m, trigger) {
+  document.querySelector('.player-note').textContent='Si el video terminó o no carga, abrilo en YouTube o visitá el canal.';
   const stream = currentLiveStream(m);
   if (!stream) return;
   const id = youtubeVideoId(stream.url);
@@ -287,6 +290,7 @@ function openPlayer(m, trigger) {
   $("player-heading").textContent = m.name;
   $("player-video-title").textContent =
     stream.title || "Video del canal oficial";
+  $("player-external").textContent="Abrir en YouTube ↗";
   $("player-external").href = "https://www.youtube.com/watch?v=" + id;
   $("player-external").setAttribute(
     "aria-label",
@@ -310,6 +314,14 @@ function openPlayer(m, trigger) {
   recordOpen(m.id);
   $("player-close").focus();
 }
+function openAudio(m){
+ const url=safeURL(m.audioUrl);if(!url)return;
+ document.querySelector('.player-note').textContent='Señal de audio proporcionada por la emisora. Si no carga, podés abrir su sitio oficial.';
+ returnFocus=m.id;activeVideo=null;$('player-heading').textContent=m.name;$('player-video-title').textContent='Audio de la emisora';$('player-panel').hidden=false;$('player-slot').replaceChildren();
+ const audio=element('audio');audio.controls=true;audio.preload='none';audio.src=url;audio.setAttribute('aria-label','Escuchar '+m.name);audio.onerror=()=>toast('No se pudo reproducir el audio. Podés abrir el sitio de la emisora.');$('player-slot').append(audio);
+ $('player-external').href=safeURL(m.website)||url;$('player-external').textContent='Abrir sitio de la emisora ↗';$('player-external').setAttribute('aria-label','Abrir sitio de '+m.name);$('player-channel').hidden=true;
+ audio.play().catch(()=>toast('Tocá reproducir para iniciar el audio.'));recordOpen(m.id);$('player-close').focus();
+}
 $("player-close").onclick = () => {
   $("player-slot").replaceChildren();
   activeVideo = null;
@@ -317,7 +329,7 @@ $("player-close").onclick = () => {
   const buttons = [...document.querySelectorAll(".play-link")];
   const m = media.find((m) => m.id === returnFocus);
   const target = buttons.find(
-    (b) => b.getAttribute("aria-label") === "Ver vivo de " + m?.name,
+    (b) => ["Ver vivo de " + m?.name,"Escuchar " + m?.name].includes(b.getAttribute("aria-label")),
   );
   (target || $("home")).focus();
 };
@@ -364,25 +376,10 @@ $("form").onsubmit = async (e) => {
     return;
   }
   const submit=e.submitter;submit.disabled=true;
-  try{const r=await fetch('/api/submissions',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(item)});const result=await r.json();if(!r.ok)throw Error(result.error||'No se pudo enviar');$('saved').textContent=result.duplicate?'Este sitio ya tiene una propuesta registrada.':'Propuesta recibida. Queda pendiente de revisión; todavía no está publicada.';e.target.reset()}
+  try{const r=await fetch('/api/submissions',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(item)});const result=await r.json();if(!r.ok)throw Error(result.error||'No se pudo enviar');$('saved').textContent=result.duplicate?'Este sitio ya tiene una propuesta registrada.':'Propuesta recibida. Ya está en la lista del panel como borrador pendiente de aprobación.';e.target.reset()}
   catch(error){$('saved').textContent=error.message}
   finally{submit.disabled=false}
 
-};
-$("export").onclick = () => {
-  const drafts = read("sf-proposals", []);
-  if (!Array.isArray(drafts) || !drafts.length) {
-    $("saved").textContent = "Todavía no hay borradores para exportar.";
-    return;
-  }
-  const url = URL.createObjectURL(
-    new Blob([JSON.stringify(drafts, null, 2)], { type: "application/json" }),
-  );
-  const a = element("a");
-  a.href = url;
-  a.download = "propuestas-medios.json";
-  a.click();
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
 };
 let catalogSource = null;
 function showCatalogSource(source, stale = false) {

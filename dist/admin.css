@@ -5,3 +5,5 @@
 .admin-layout>*{min-width:0}.admin-fields label,.person-row label{min-width:0}
 
 #review-box{margin:12px 0 28px;background:var(--color-surface);padding:16px;border-radius:var(--radius-small)}#review-box summary{cursor:pointer;font-weight:700}.submission{border-top:1px solid var(--color-border);padding:12px 0}.submission button{margin:8px}.submission a{display:block;padding:10px 0}
+
+.admin-counts{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 24px}.admin-counts [aria-pressed=true]{background:var(--color-primary);color:var(--color-on-primary)}

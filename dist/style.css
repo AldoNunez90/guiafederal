@@ -10,3 +10,5 @@
 .card.is-live{background:var(--color-live-background);border:1px solid var(--color-live-border);box-shadow:inset 4px 0 var(--color-live-border)}.live-label{display:flex!important;align-items:center;gap:7px}.live-label:before{content:'';width:8px;height:8px;flex-shrink:0;border-radius:50%;background:var(--color-live-indicator);animation:live-pulse 2s ease-in-out infinite}@keyframes live-pulse{0%,100%{opacity:1}50%{opacity:.35}}@media(prefers-reduced-motion:reduce){.live-label:before{animation:none}}
 
 .honeypot{position:absolute!important;left:-10000px;width:1px;height:1px;overflow:hidden}
+
+#player-slot audio{width:100%;min-height:54px;margin:16px 0}

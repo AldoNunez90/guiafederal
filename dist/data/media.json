@@ -249,7 +249,8 @@
         "role": "Conductor/a",
         "program": "Encendidos"
       }
-    ]
+    ],
+    "audioUrl": "https://server.streamcasthd.com/8756/stream"
   },
   {
     "id": "medio-011",
@@ -418,7 +419,8 @@
         "role": "Otro",
         "program": "Dirección periodística"
       }
-    ]
+    ],
+    "audioUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/radio3.mp3"
   },
   {
     "id": "medio-017",

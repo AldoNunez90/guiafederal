@@ -3,6 +3,10 @@ const DISCOVERY_MS=2*60*60*1000;
 export function verifiedLive(video,channelId){
  return video?.snippet?.channelId===channelId&&video.snippet.liveBroadcastContent==='live'&&Boolean(video.liveStreamingDetails?.actualStartTime)&&!video.liveStreamingDetails?.actualEndTime&&video.status?.embeddable===true&&video.status?.privacyStatus==='public';
 }
+export function selectLiveVideo(videos,channelId,phrase=''){
+ const norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+ return videos.find(v=>verifiedLive(v,channelId)&&(!phrase||norm(v.snippet.title).includes(norm(phrase))));
+}
 export function channelReference(value){
  try{const u=new URL(value);if(!['www.youtube.com','youtube.com'].includes(u.hostname))return null;
  const id=u.pathname.match(/^\/channel\/(UC[a-zA-Z0-9_-]{22})(?:\/|$)/);if(id)return {id:id[1]};
@@ -23,11 +27,11 @@ export async function detectLive(m,{key,now=Date.now(),fetcher=fetch}={}){
  const existing=(m.streams||[]).filter(s=>s.contentKind==='live').map(s=>youtubeVideoId(s.url)).filter(Boolean);
  let candidates=[];
  if(existing.length){candidates=await youtube('videos',{part:'snippet,status,liveStreamingDetails',id:existing.slice(0,5).join(',')},key,fetcher)}
- let video=candidates.find(v=>verifiedLive(v,channelId));
+ let video=selectLiveVideo(candidates,channelId,m.youtubeLiveTitleMatch);
  if(!video&&(!discoveryAt||now-Date.parse(discoveryAt)>=DISCOVERY_MS)){
-  const found=await youtube('search',{part:'snippet',channelId,eventType:'live',type:'video',videoEmbeddable:'true',maxResults:'5'},key,fetcher);
+  const found=await youtube('search',{part:'snippet',channelId,eventType:'live',type:'video',videoEmbeddable:'true',maxResults:'10'},key,fetcher);
   discoveryAt=new Date(now).toISOString();ids=found.map(v=>v.id?.videoId).filter(id=>/^[a-zA-Z0-9_-]{11}$/.test(id||''));
-  if(ids.length){candidates=await youtube('videos',{part:'snippet,status,liveStreamingDetails',id:ids.join(',')},key,fetcher);video=candidates.find(v=>verifiedLive(v,channelId))}
+  if(ids.length){candidates=await youtube('videos',{part:'snippet,status,liveStreamingDetails',id:ids.join(',')},key,fetcher);video=selectLiveVideo(candidates,channelId,m.youtubeLiveTitleMatch)}
  }
  const checked=new Date(now).toISOString();
  const streams=(m.streams||[]).filter(s=>s.contentKind!=='live');
@@ -37,7 +41,7 @@ export async function detectLive(m,{key,now=Date.now(),fetcher=fetch}={}){
 export async function refreshPilotLive(db){
  const key=process.env.YOUTUBE_API_KEY;if(!key)return;
  const collection=db.collection('media');const now=Date.now();
- const pilots=await collection.find({liveMonitoring:true,publicationStatus:'published'}).limit(5).toArray();
+ const pilots=await collection.find({liveMonitoring:true,publicationStatus:'published'}).limit(20).toArray();
  await Promise.all(pilots.map(async m=>{
   // Reserva persistente: evita que cada visitante consuma una nueva consulta.
   const reserved=await collection.findOneAndUpdate({id:m.id,$or:[{liveCheckNextAt:{$exists:false}},{liveCheckNextAt:{$lte:new Date(now)}}]},{$set:{liveCheckNextAt:new Date(now+120000)}},{returnDocument:'after'});
