@@ -4,10 +4,15 @@
   "private": true,
   "scripts": {
     "start": "node scripts/serve.mjs",
-    "check": "node scripts/check.mjs"
+    "check": "node scripts/check.mjs",
+    "db:status": "node scripts/db-status.mjs",
+    "db:seed": "node scripts/db-seed.mjs",
+    "db:live": "node scripts/db-live.mjs"
   },
   "type": "module",
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
+    "mongodb": "^6.21.0",
     "vercel": "^65.3.1"
   }
 }

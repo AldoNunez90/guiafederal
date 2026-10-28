@@ -13,3 +13,9 @@ Verificación manual pendiente: tocar Radio Sudamericana, iniciar reproducción 
 ## Resultado de la prueba de escritorio
 
 Se comprobó en el navegador integrado la carga de video de Radio Sudamericana, su permanencia al filtrar por nombre y el desmontaje del iframe al cerrar, con devolución de foco al botón del medio. Esto no verifica el estado actual en vivo, audio, continuidad en otras aplicaciones ni comportamiento móvil. La prueba de Android/iOS continúa pendiente.
+
+## Acción única de ficha (28/10/2026)
+
+Logo y nombre forman una sola acción. Ver vivo usa currentLiveStream: requiere status live en la señal, lastCheckedAt reciente (menos de cinco minutos), expiresAt futuro y contenido distinto de published_video. Si no, se ofrece Abrir web. Si no hay web, aparece Acceso pendiente sin enlace. El filtro En vivo usa la misma condición. Se revisa la caducidad antes del clic y cada 30 segundos sin desmontar el reproductor activo.
+
+La muestra actual tiene grabaciones y estados desconocidos, por lo que sus accesos principales abren la web. No se ha implementado aún un detector automático ni un servicio que actualice esas comprobaciones. Los campos no deben completarse a partir de horarios o de que un video exista. Requieren evidencia del estado real de la emisión.

@@ -9,3 +9,7 @@ yarn-debug.log*
 yarn-error.log*
 .DS_Store
 Thumbs.db
+
+# Archivos locales de credenciales Atlas
+*-credentials.env
+*.env

@@ -1,0 +1,2 @@
+import {database,closeDatabase,databaseName} from '../server/db.js';
+try{const db=await database();await db.command({ping:1});console.log('Conexión correcta. Base: '+databaseName()+'. Medios publicados: '+await db.collection('media').countDocuments({publicationStatus:'published'}));}catch{console.error('Conexión fallida. Revisá credenciales, permisos y acceso de red en Atlas.');process.exitCode=1}finally{await closeDatabase().catch(()=>{})}

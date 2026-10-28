@@ -1,0 +1,6 @@
+node_modules
+.git
+atlas-credentials.env
+*-credentials.env
+.env
+.env.*

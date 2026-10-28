@@ -17,3 +17,11 @@ export function youtubeEmbedURL(id,origin){
  return u.href;
 }
 export function youtubeStream(m){return (m.streams||[]).find(s=>s.provider==='youtube'&&youtubeVideoId(s.url))||null}
+
+// Una grabación o una comprobación vieja nunca habilita Ver vivo.
+export function currentLiveStream(m,now=Date.now()){
+ return (m.streams||[]).find(s=>{
+  const checked=Date.parse(s.lastCheckedAt),expires=Date.parse(s.expiresAt);
+  return s.provider==='youtube'&&youtubeVideoId(s.url)&&s.status==='live'&&s.contentKind!=='published_video'&&Number.isFinite(checked)&&Number.isFinite(expires)&&checked<=now&&now-checked<5*60*1000&&expires>now;
+ })||null;
+}

@@ -45,3 +45,7 @@ Después de publicar, comprobar /theme.css y /style.css: deben devolver CSS, no 
 ## Muestra de cinco medios
 
 La sección Para probar incluye Vorterix, Radio Sudamericana, La Coope, AIRE y Canal 10 Tucumán, con logos obtenidos de sus sitios oficiales. Tres ofrecen videos publicados (no vivos confirmados); dos mantienen acceso externo. Procedencia y pendientes en docs/muestra-piloto.md. Reiniciar npm start si el servidor anterior no mostraba imágenes SVG. Verificación visual de escritorio completada; prueba en teléfono real pendiente.
+
+## Catálogo MongoDB
+
+Conexión e importación inicial completadas: 30 medios en guia_federal.media. Reiniciar npm start para usar /api/media. Herramientas: npm run db:status, npm run db:seed y npm run db:live. Ver docs/mongodb.md para actualización manual y variables requeridas en Vercel. La detección automática todavía no está implementada.
