@@ -350,7 +350,7 @@ $("reset").onclick = () => {
 for (const id of ["add", "add-bottom"])
   $(id).onclick = () => $("proposal").showModal();
 $("close").onclick = () => $("proposal").close();
-$("form").onsubmit = (e) => {
+$("form").onsubmit = async (e) => {
   e.preventDefault();
   const item = Object.fromEntries(new FormData(e.target));
   if (!safeURL(item.website)) {
@@ -363,16 +363,11 @@ $("form").onsubmit = (e) => {
     );
     return;
   }
-  item.status = "borrador_local";
-  item.createdAt = new Date().toISOString();
-  const stored = read("sf-proposals", []);
-  const drafts = Array.isArray(stored) ? stored : [];
-  drafts.push(item);
-  if (save("sf-proposals", drafts)) {
-    $("saved").textContent =
-      "Borrador guardado en este navegador. No se envió ni publicó.";
-    e.target.reset();
-  }
+  const submit=e.submitter;submit.disabled=true;
+  try{const r=await fetch('/api/submissions',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(item)});const result=await r.json();if(!r.ok)throw Error(result.error||'No se pudo enviar');$('saved').textContent=result.duplicate?'Este sitio ya tiene una propuesta registrada.':'Propuesta recibida. Queda pendiente de revisión; todavía no está publicada.';e.target.reset()}
+  catch(error){$('saved').textContent=error.message}
+  finally{submit.disabled=false}
+
 };
 $("export").onclick = () => {
   const drafts = read("sf-proposals", []);

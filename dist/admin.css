@@ -3,3 +3,5 @@
 /* Espacio de trabajo amplio en escritorio, sin estrechar el editor. */
 @media(min-width:1000px){.admin-page header,.admin-page main{max-width:1680px;padding-left:36px;padding-right:36px}.admin-layout{grid-template-columns:280px minmax(0,1fr);gap:32px}.admin-fields{gap:20px 24px}.admin-fields label,.person-row label{font-size:14px}#editor{padding:30px}.person-row{gap:16px 20px}#editor input,#editor select{font-size:15px}}
 .admin-layout>*{min-width:0}.admin-fields label,.person-row label{min-width:0}
+
+#review-box{margin:12px 0 28px;background:var(--color-surface);padding:16px;border-radius:var(--radius-small)}#review-box summary{cursor:pointer;font-weight:700}.submission{border-top:1px solid var(--color-border);padding:12px 0}.submission button{margin:8px}.submission a{display:block;padding:10px 0}

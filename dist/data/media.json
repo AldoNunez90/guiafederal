@@ -208,15 +208,48 @@
       "Actualidad"
     ],
     "website": "https://www.aconcaguaradio.com/",
-    "logo": null,
+    "logo": "assets/logos/aconcagua.svg",
     "source": "https://www.aconcaguaradio.com/",
     "researchStatus": "sitio_revisado",
-    "researchDate": "2026-10-23",
+    "researchDate": "2026-10-28",
     "liveStatus": "unknown",
     "lastCheckedAt": null,
     "streams": [],
     "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
-    "youtubeChannel": null
+    "youtubeChannel": null,
+    "logoSource": "https://www.aconcaguaradio.com/wp-content/uploads/2025/04/Recurso-12.svg",
+    "logoTheme": "light",
+    "pilot": true,
+    "people": [
+      {
+        "id": "persona-pablo-perez-delgado",
+        "name": "Pablo Pérez Delgado",
+        "aliases": [],
+        "role": "Conductor/a",
+        "program": "Hermoso caos"
+      },
+      {
+        "id": "persona-pablo-segura",
+        "name": "Pablo Segura",
+        "aliases": [],
+        "role": "Conductor/a",
+        "program": "Hermoso caos"
+      },
+      {
+        "id": "persona-emiliano-serrano",
+        "name": "Emiliano Serrano",
+        "aliases": [],
+        "role": "Conductor/a",
+        "program": "Encendidos"
+      },
+      {
+        "id": "persona-andrea-sanhueza",
+        "name": "Andrea Sanhueza",
+        "aliases": [],
+        "role": "Conductor/a",
+        "program": "Encendidos"
+      }
+    ]
   },
   {
     "id": "medio-011",
@@ -287,16 +320,53 @@
     "topics": [
       "Actualidad"
     ],
-    "website": "https://www.lmneuquen.com/neuquen/lm-neuquen-vivo-como-es-la-nueva-apuesta-streaming-que-arranca-este-lunes-2-marzo-n1229849",
-    "logo": null,
-    "source": "https://www.lmneuquen.com/neuquen/lm-neuquen-vivo-como-es-la-nueva-apuesta-streaming-que-arranca-este-lunes-2-marzo-n1229849",
-    "researchStatus": "referencia",
-    "researchDate": "2026-10-23",
+    "website": "https://www.lmneuquen.com/",
+    "logo": "assets/logos/lmneuquen.svg",
+    "source": "https://www.lmneuquen.com/",
+    "researchStatus": "sitio_revisado",
+    "researchDate": "2026-10-28",
     "liveStatus": "unknown",
     "lastCheckedAt": null,
     "streams": [],
     "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
-    "youtubeChannel": null
+    "youtubeChannel": "https://www.youtube.com/@lmneuquenenvivo",
+    "logoSource": "https://www.lmneuquen.com/css-custom/195/v2/images/logo-retina-195-v3.svg",
+    "logoTheme": "light",
+    "pilot": true,
+    "people": [
+      {
+        "id": "persona-yamil-gonzalez",
+        "name": "Yamil González",
+        "aliases": [],
+        "role": "Conductor/a",
+        "program": "LM Neuquén en Vivo"
+      },
+      {
+        "id": "persona-luciano-garcia-tauro",
+        "name": "Luciano García Tauro",
+        "aliases": [
+          "Lulo García Tauro"
+        ],
+        "role": "Panelista",
+        "program": "LM Neuquén en Vivo"
+      },
+      {
+        "id": "persona-agostina-palladino",
+        "name": "Agostina Palladino",
+        "aliases": [
+          "Agos"
+        ],
+        "role": "Panelista",
+        "program": "LM Neuquén en Vivo"
+      },
+      {
+        "id": "persona-nacho-maccarone",
+        "name": "Nacho Maccarone",
+        "aliases": [],
+        "role": "Otro",
+        "program": "LM Neuquén en Vivo"
+      }
+    ]
   },
   {
     "id": "medio-015",
@@ -328,15 +398,27 @@
       "Actualidad"
     ],
     "website": "https://www.cadena3.com/",
-    "logo": null,
+    "logo": "assets/logos/cadena3.png",
     "source": "https://www.cadena3.com/",
     "researchStatus": "sitio_revisado",
-    "researchDate": "2026-10-23",
+    "researchDate": "2026-10-28",
     "liveStatus": "unknown",
     "lastCheckedAt": null,
     "streams": [],
     "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
-    "youtubeChannel": null
+    "youtubeChannel": "https://www.youtube.com/@cadena3",
+    "logoSource": "https://www.cadena3.com/img2024/logo-cadena-3.png",
+    "logoTheme": "light",
+    "pilot": true,
+    "people": [
+      {
+        "id": "persona-sergio-suppo",
+        "name": "Sergio Suppo",
+        "aliases": [],
+        "role": "Otro",
+        "program": "Dirección periodística"
+      }
+    ]
   },
   {
     "id": "medio-017",
@@ -348,15 +430,18 @@
       "Actualidad"
     ],
     "website": "https://eldoce.tv/",
-    "logo": null,
+    "logo": "assets/logos/eldoce.png",
     "source": "https://eldoce.tv/",
     "researchStatus": "sitio_revisado",
-    "researchDate": "2026-10-23",
+    "researchDate": "2026-10-28",
     "liveStatus": "unknown",
     "lastCheckedAt": null,
     "streams": [],
     "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
-    "youtubeChannel": null
+    "youtubeChannel": "https://www.youtube.com/@eldoce",
+    "logoSource": "https://eldoce.tv/pf/resources/images/eldoce/eldoce-logo-header.png?d=736&mxId=00000000",
+    "logoTheme": "light",
+    "pilot": true
   },
   {
     "id": "medio-018",
@@ -411,7 +496,16 @@
     "logoSource": "https://www.radiosudamericana.com/img/logo.png",
     "pilot": true,
     "logoTheme": "light",
-    "accessNote": "Video publicado por el canal oficial; no es una confirmación de transmisión en vivo."
+    "accessNote": "Video publicado por el canal oficial; no es una confirmación de transmisión en vivo.",
+    "people": [
+      {
+        "id": "persona-clara-aquino-de-costa",
+        "name": "Clara Aquino De Costa",
+        "aliases": [],
+        "role": "Conductor/a",
+        "program": "Sentirse Bien"
+      }
+    ]
   },
   {
     "id": "medio-020",
@@ -498,15 +592,34 @@
       "Cultura"
     ],
     "website": "https://www.radiouniversidad.unlp.edu.ar/",
-    "logo": null,
+    "logo": "assets/logos/radiounlp.png",
     "source": "https://www.radiouniversidad.unlp.edu.ar/",
     "researchStatus": "sitio_revisado",
-    "researchDate": "2026-10-23",
+    "researchDate": "2026-10-28",
     "liveStatus": "unknown",
     "lastCheckedAt": null,
     "streams": [],
     "notes": "Clasificación editorial preliminar. Ubicación y señales pendientes de validación con el medio.",
-    "youtubeChannel": null
+    "youtubeChannel": "https://www.youtube.com/@radioulaplata",
+    "logoSource": "https://www.radiouniversidad.unlp.edu.ar/wp-content/uploads/2020/02/logo.png",
+    "logoTheme": "light",
+    "pilot": true,
+    "people": [
+      {
+        "id": "persona-ariel-valeri",
+        "name": "Ariel Valeri",
+        "aliases": [],
+        "role": "Conductor/a",
+        "program": "Un montón de gente"
+      },
+      {
+        "id": "persona-juliana-godoy",
+        "name": "Juliana Godoy",
+        "aliases": [],
+        "role": "Conductor/a",
+        "program": "Un montón de gente"
+      }
+    ]
   },
   {
     "id": "medio-024",

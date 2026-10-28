@@ -37,7 +37,7 @@ export async function detectLive(m,{key,now=Date.now(),fetcher=fetch}={}){
 export async function refreshPilotLive(db){
  const key=process.env.YOUTUBE_API_KEY;if(!key)return;
  const collection=db.collection('media');const now=Date.now();
- const pilots=await collection.find({pilot:true,publicationStatus:'published'}).limit(5).toArray();
+ const pilots=await collection.find({liveMonitoring:true,publicationStatus:'published'}).limit(5).toArray();
  await Promise.all(pilots.map(async m=>{
   // Reserva persistente: evita que cada visitante consuma una nueva consulta.
   const reserved=await collection.findOneAndUpdate({id:m.id,$or:[{liveCheckNextAt:{$exists:false}},{liveCheckNextAt:{$lte:new Date(now)}}]},{$set:{liveCheckNextAt:new Date(now+120000)}},{returnDocument:'after'});

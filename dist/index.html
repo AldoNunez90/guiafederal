@@ -127,7 +127,7 @@
           <h2>Tu medio también tiene lugar.</h2>
           <p>Prepará una propuesta para ampliar el catálogo federal.</p>
         </div>
-        <button id="add-bottom">Preparar propuesta ↗</button>
+        <button id="add-bottom">Sumar mi medio ↗</button>
       </section>
       <footer>
         Señal Federal es un nombre de trabajo. Sin rankings de audiencia. Sin
@@ -136,17 +136,16 @@
       </footer>
     </main>
     <dialog id="proposal">
-      <form id="form">
+      <form id="form"><label class="honeypot" aria-hidden="true" inert>Empresa<input name="company" tabindex="-1" autocomplete="off"></label>
         <button type="button" id="close" class="close" aria-label="Cerrar">
           ×</button
         ><span class="eyebrow">SUMEMOS MÁS VOCES</span>
         <h2>Proponé un medio</h2>
         <p>
-          Esta versión guarda un borrador en este navegador. No lo envía ni lo
-          publica. Podés exportarlo para compartirlo después.
+          Tu propuesta se envía para revisión. Sólo se publicará después de que verifiquemos sus datos.
         </p>
         <label
-          >Nombre del medio<input name="name" maxlength="100" required /></label
+          >Nombre del medio<input name="name" autofocus maxlength="100" required /></label
         ><label
           >Provincia<select
             name="province"
@@ -175,7 +174,7 @@
             >Enlace de una emisión específica; puede cambiar entre
             programas.</span
           ></label
-        ><button class="primary" type="submit">Guardar borrador local</button
+        ><button class="primary" type="submit">Enviar propuesta</button
         ><button id="export" type="button">Exportar borradores</button>
         <p id="saved" role="status"></p>
       </form>

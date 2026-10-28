@@ -55,3 +55,7 @@ Conexión e importación inicial completadas: 30 medios en guia_federal.media. R
 Panel privado en /admin. ADMIN_PASSWORD y ADMIN_SESSION_SECRET se generaron en atlas-credentials.env; copiar sus valores a Vercel y redesplegar para probar allí. No subir el archivo. Reiniciar npm start para el panel local. Las fichas admiten personas con nombre, alias, rol y programa; la búsqueda pública ya los incluye. Guía completa en docs/administracion.md.
 
 Validación: 15 tests automatizados y prueba HTTP contra Atlas de login, edición de ficha temporal, conflicto de versiones y origen. Ficha de prueba eliminada; revisión visual del acceso y de la guía completada. Prueba del formulario completo en navegador y en teléfono real pendiente.
+
+## Segunda prueba
+
+Muestra ampliada a diez fichas con logos oficiales y doce relaciones verificadas de personas. Se conservaron las ediciones existentes, incluido el nombre Vorterix AO. El panel ofrece reutilizar una persona existente. Sumar un medio ahora envía propuestas a MongoDB; en /admin se revisan y se aceptan como borrador antes de publicar. No requiere nuevas variables. Código y logos pendientes de despliegue; datos enriquecidos ya aplicados en Atlas. Fuentes, límites y guía de prueba en docs/segunda-prueba.md.

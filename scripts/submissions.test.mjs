@@ -1,0 +1,10 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {submissionData} from '../server/submission-validation.js';
+import {matchesMedia} from '../dist/search.js';
+import publicHandler from '../api/submissions.js';
+import adminHandler from '../api/admin-submissions.js';
+const proposal={name:'Medio de prueba',city:'Ciudad',province:'Provincia',kind:'Radio',website:'https://www.example.com/'};
+test('Validación de propuestas limita tipo y rechaza enlaces ejecutables',()=>{assert.throws(()=>submissionData({...proposal,website:'javascript:alert(1)'}));assert.throws(()=>submissionData({...proposal,kind:'Otro'}));assert.throws(()=>submissionData({...proposal,youtubeVideo:'https://youtube.com/@canal'}));assert.equal(submissionData(proposal).key,submissionData({...proposal,website:'https://example.com'}).key)});
+test('No se pueden consultar propuestas públicamente ni moderar sin sesión',async()=>{let status;const res={setHeader(){},set statusCode(v){status=v},end(){}};await publicHandler({method:'GET'},res);assert.equal(status,405);await adminHandler({method:'GET',headers:{}},res);assert.equal(status,401)});
+test('Una persona compartida devuelve varios medios por nombre o alias',()=>{const person={id:'persona-demo',name:'María Gómez',aliases:['La Mery']};const rows=[{name:'Radio A',people:[person]},{name:'Canal B',people:[person]},{name:'Radio C',people:[]}];assert.equal(rows.filter(m=>matchesMedia(m,'maria gomez')).length,2);assert.equal(rows.filter(m=>matchesMedia(m,'mery')).length,2)});

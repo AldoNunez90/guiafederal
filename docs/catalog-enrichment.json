@@ -1,0 +1,185 @@
+[
+  {
+    "id": "medio-010",
+    "fields": {
+      "logo": "assets/logos/aconcagua.svg",
+      "logoSource": "https://www.aconcaguaradio.com/wp-content/uploads/2025/04/Recurso-12.svg",
+      "logoTheme": "light",
+      "website": "https://www.aconcaguaradio.com/",
+      "youtubeChannel": null,
+      "pilot": true,
+      "researchStatus": "sitio_revisado",
+      "researchDate": "2026-10-28",
+      "source": "https://www.aconcaguaradio.com/"
+    }
+  },
+  {
+    "id": "medio-014",
+    "fields": {
+      "logo": "assets/logos/lmneuquen.svg",
+      "logoSource": "https://www.lmneuquen.com/css-custom/195/v2/images/logo-retina-195-v3.svg",
+      "logoTheme": "light",
+      "website": "https://www.lmneuquen.com/",
+      "youtubeChannel": "https://www.youtube.com/@lmneuquenenvivo",
+      "pilot": true,
+      "researchStatus": "sitio_revisado",
+      "researchDate": "2026-10-28",
+      "source": "https://www.lmneuquen.com/"
+    }
+  },
+  {
+    "id": "medio-016",
+    "fields": {
+      "logo": "assets/logos/cadena3.png",
+      "logoSource": "https://www.cadena3.com/img2024/logo-cadena-3.png",
+      "logoTheme": "light",
+      "website": "https://www.cadena3.com/",
+      "youtubeChannel": "https://www.youtube.com/@cadena3",
+      "pilot": true,
+      "researchStatus": "sitio_revisado",
+      "researchDate": "2026-10-28",
+      "source": "https://www.cadena3.com/"
+    }
+  },
+  {
+    "id": "medio-017",
+    "fields": {
+      "logo": "assets/logos/eldoce.png",
+      "logoSource": "https://eldoce.tv/pf/resources/images/eldoce/eldoce-logo-header.png?d=736&mxId=00000000",
+      "logoTheme": "light",
+      "website": "https://eldoce.tv/",
+      "youtubeChannel": "https://www.youtube.com/@eldoce",
+      "pilot": true,
+      "researchStatus": "sitio_revisado",
+      "researchDate": "2026-10-28",
+      "source": "https://eldoce.tv/"
+    }
+  },
+  {
+    "id": "medio-023",
+    "fields": {
+      "logo": "assets/logos/radiounlp.png",
+      "logoSource": "https://www.radiouniversidad.unlp.edu.ar/wp-content/uploads/2020/02/logo.png",
+      "logoTheme": "light",
+      "website": "https://www.radiouniversidad.unlp.edu.ar/",
+      "youtubeChannel": "https://www.youtube.com/@radioulaplata",
+      "pilot": true,
+      "researchStatus": "sitio_revisado",
+      "researchDate": "2026-10-28",
+      "source": "https://www.radiouniversidad.unlp.edu.ar/"
+    }
+  },
+  {
+    "id": "medio-010",
+    "people": [
+      {
+        "id": "persona-pablo-perez-delgado",
+        "name": "Pablo Pérez Delgado",
+        "aliases": [],
+        "role": "Conductor/a",
+        "program": "Hermoso caos"
+      },
+      {
+        "id": "persona-pablo-segura",
+        "name": "Pablo Segura",
+        "aliases": [],
+        "role": "Conductor/a",
+        "program": "Hermoso caos"
+      },
+      {
+        "id": "persona-emiliano-serrano",
+        "name": "Emiliano Serrano",
+        "aliases": [],
+        "role": "Conductor/a",
+        "program": "Encendidos"
+      },
+      {
+        "id": "persona-andrea-sanhueza",
+        "name": "Andrea Sanhueza",
+        "aliases": [],
+        "role": "Conductor/a",
+        "program": "Encendidos"
+      }
+    ]
+  },
+  {
+    "id": "medio-014",
+    "people": [
+      {
+        "id": "persona-yamil-gonzalez",
+        "name": "Yamil González",
+        "aliases": [],
+        "role": "Conductor/a",
+        "program": "LM Neuquén en Vivo"
+      },
+      {
+        "id": "persona-luciano-garcia-tauro",
+        "name": "Luciano García Tauro",
+        "aliases": [
+          "Lulo García Tauro"
+        ],
+        "role": "Panelista",
+        "program": "LM Neuquén en Vivo"
+      },
+      {
+        "id": "persona-agostina-palladino",
+        "name": "Agostina Palladino",
+        "aliases": [
+          "Agos"
+        ],
+        "role": "Panelista",
+        "program": "LM Neuquén en Vivo"
+      },
+      {
+        "id": "persona-nacho-maccarone",
+        "name": "Nacho Maccarone",
+        "aliases": [],
+        "role": "Otro",
+        "program": "LM Neuquén en Vivo"
+      }
+    ]
+  },
+  {
+    "id": "medio-016",
+    "people": [
+      {
+        "id": "persona-sergio-suppo",
+        "name": "Sergio Suppo",
+        "aliases": [],
+        "role": "Otro",
+        "program": "Dirección periodística"
+      }
+    ]
+  },
+  {
+    "id": "medio-019",
+    "people": [
+      {
+        "id": "persona-clara-aquino-de-costa",
+        "name": "Clara Aquino De Costa",
+        "aliases": [],
+        "role": "Conductor/a",
+        "program": "Sentirse Bien"
+      }
+    ]
+  },
+  {
+    "id": "medio-023",
+    "people": [
+      {
+        "id": "persona-ariel-valeri",
+        "name": "Ariel Valeri",
+        "aliases": [],
+        "role": "Conductor/a",
+        "program": "Un montón de gente"
+      },
+      {
+        "id": "persona-juliana-godoy",
+        "name": "Juliana Godoy",
+        "aliases": [],
+        "role": "Conductor/a",
+        "program": "Un montón de gente"
+      }
+    ]
+  }
+]
